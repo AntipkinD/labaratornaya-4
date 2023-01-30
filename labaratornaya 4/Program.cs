@@ -1,11 +1,19 @@
-﻿internal class Program
+﻿using System.Diagnostics.Metrics;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
         int maxLength = 1000;
         var counter = new int[maxLength];
 
-        for (int N = int.Parse(Console.ReadLine()); N > 0; N--)
-            counter[int.Parse(Console.ReadLine())]++;
+        for (int i = Convert.ToInt32(Console.ReadLine()); i > 0; i--)
+            counter[Convert.ToInt32(Console.ReadLine())]++;
+
+        for (int j = 0; j < counter.Length; j++)
+        {
+            if (counter[j] != 0)
+                Console.WriteLine($"{j} {counter[j]}");
+        }
     }
 }
