@@ -10,7 +10,7 @@ internal class Program
         for (int i = Convert.ToInt32(Console.ReadLine()); i > 0; i--)
             counter[Convert.ToInt32(Console.ReadLine())]++;
 
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < counter.Length; j++)
         {
             if (counter[j] != 0)
                 Console.WriteLine($"{j} {counter[j]}");
